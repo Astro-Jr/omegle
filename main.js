@@ -36,7 +36,8 @@ document.getElementById('start-call').addEventListener('click', () => {
   // Handle remote stream and ICE candidates
     peerConnection.ontrack = (event) => {
         const remoteVideo = document.getElementById('remote-video');
-        remoteVideo.srcObject = event.streams[0];
+        remoteVideo.srcObject = event.streams[1];
+        
     };
 
     peerConnection.onicecandidate = (event) => {
